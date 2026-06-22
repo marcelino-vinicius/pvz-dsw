@@ -13,6 +13,8 @@
 * {
     margin: 0;
     padding: 0;
+
+    box-sizing: border-box;
 }
 
 body {
@@ -63,22 +65,24 @@ section:nth-child(even) .texto-hero {
     margin-top: 30px;
     padding: 10px;
 
-    border-radius: 12px;
+    border: 10px groove hsl(235, 22%, 50%);
+    border-radius: 6px;
 
-    color: white;
+    background-color: hsl(235, 22%, 33%);
 
-    background-color: var(--cor-secundaria);
-
-    font-size: 1.25rem;
+    color: hsl(141, 77%, 50%);
     text-decoration: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px black;
 
     display: inline-block;
 
-    transition: background-color 0.2s ease;
 }
 
 .btn-saber-mais:hover {
-    background-color: var(--cor-destaque);
+    border: 10px ridge hsl(235, 22%, 50%);
+    background-color: hsl(235, 22%, 33%);
 }
 
 /* Cabeçalho */
@@ -113,6 +117,12 @@ nav a {
 
 nav a:hover {
     color: yellow;
+}
+
+.pag-atual {
+    color: yellow;
+    text-decoration: underline;
+    text-underline-offset: 5px;
 }
 
 /* Área principal */
