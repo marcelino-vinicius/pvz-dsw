@@ -20,6 +20,7 @@ main {
 
 h1 {
     color: var(--texto-destaque);
+    text-align: center;
     font-size: 3.5rem;
 }
 
@@ -31,6 +32,10 @@ h1 {
     object-position: top left;
 
     border-radius: 12px;
+}
+
+.mini-img {
+    width: 100%;
 }
 
 .descricao {
