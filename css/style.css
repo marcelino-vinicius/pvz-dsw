@@ -35,7 +35,7 @@ section {
 }
 
 section:nth-child(even) {
-    background-color: hsl(0, 0%, 95%);
+    background-color: hsl(0, 0%, 90%);
 }
 
 section:nth-child(odd) {
@@ -47,7 +47,6 @@ section h2 {
 }
 
 section img {
-    border-radius: 12px;
 
     width: min(550px, 100%);
     height: auto;
@@ -94,11 +93,11 @@ section p {
 /* Cabeçalho */
 
 header {
-    padding: 10px 25px;
+    padding: 10px clamp(10px, 2vw, 25px);
 
     background-color: var(--cor-principal);
 
-    font-size: 1.15rem;
+    font-size: clamp(1rem, calc(2vw + 0.5rem), 1.15rem);
 
     position: sticky;
     top: 0;
@@ -109,11 +108,15 @@ header {
     align-items: center;
 }
 
+#logo {
+    width: clamp(75px, 20vw, 100px);
+}
+
 nav ul {
     list-style: none;
 
     display: flex;
-    gap: 30px;
+    gap: clamp(15px, 2vw, 30px);
 }
 
 nav a {
@@ -144,12 +147,14 @@ main {
 }
 
 #hero h1 {
+    max-width: 600px;
+    margin-bottom: 20px;
+
     color: var(--texto-destaque);
 
     font-size: 4rem;
     line-height: 0.9;
 
-    margin-bottom: 20px;
 }
 
 #btn-nostalgia {
@@ -172,9 +177,14 @@ main {
         background-color 0.2s ease;
 }
 
-#btn-nostalgia:hover {
+#btn-nostalgia.enabled:hover {
     box-shadow: 0 0 14px var(--cor-destaque);
     background-color: var(--cor-destaque);
+}
+
+#btn-nostalgia.disabled {
+    background-color: #8a8a8a;
+    cursor: not-allowed;
 }
 
 footer {
