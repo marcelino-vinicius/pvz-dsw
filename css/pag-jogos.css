@@ -72,7 +72,7 @@ h1 {
 
 .personagem {
     width: 100%;
-    border-radius: 45px;
+    border-radius: 60px;
 
     aspect-ratio: 1 / 1;
     object-fit: cover;
@@ -93,14 +93,15 @@ h1 {
         grid-template-columns: 1fr 5fr;
         grid-template-areas:
             "h1 h1"
+            "m-img m-img"
             "img-j img-j"
-            "m-img desc"
+            "desc desc"
             "plantas plantas"
             "zumbis zumbis";
     }
 
     .personagem {
         border-width: 5px;
-        border-radius: 25px;
+        border-radius: 20px;
     }
 }
