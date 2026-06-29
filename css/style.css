@@ -108,7 +108,7 @@ header {
     align-items: center;
 }
 
-#logo {
+.logo {
     width: clamp(75px, 20vw, 100px);
 }
 
